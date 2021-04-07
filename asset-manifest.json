@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/topRankers/static/css/main.172b4db2.chunk.css",
-    "main.js": "/topRankers/static/js/main.64e0f194.chunk.js",
-    "main.js.map": "/topRankers/static/js/main.64e0f194.chunk.js.map",
+    "main.css": "/topRankers/static/css/main.297122cd.chunk.css",
+    "main.js": "/topRankers/static/js/main.6b6f18ca.chunk.js",
+    "main.js.map": "/topRankers/static/js/main.6b6f18ca.chunk.js.map",
     "runtime-main.js": "/topRankers/static/js/runtime-main.066b8484.js",
     "runtime-main.js.map": "/topRankers/static/js/runtime-main.066b8484.js.map",
     "static/css/2.1ad56b46.chunk.css": "/topRankers/static/css/2.1ad56b46.chunk.css",
-    "static/js/2.75ced260.chunk.js": "/topRankers/static/js/2.75ced260.chunk.js",
-    "static/js/2.75ced260.chunk.js.map": "/topRankers/static/js/2.75ced260.chunk.js.map",
+    "static/js/2.6a4cd5dc.chunk.js": "/topRankers/static/js/2.6a4cd5dc.chunk.js",
+    "static/js/2.6a4cd5dc.chunk.js.map": "/topRankers/static/js/2.6a4cd5dc.chunk.js.map",
     "index.html": "/topRankers/index.html",
     "static/css/2.1ad56b46.chunk.css.map": "/topRankers/static/css/2.1ad56b46.chunk.css.map",
-    "static/css/main.172b4db2.chunk.css.map": "/topRankers/static/css/main.172b4db2.chunk.css.map",
-    "static/js/2.75ced260.chunk.js.LICENSE.txt": "/topRankers/static/js/2.75ced260.chunk.js.LICENSE.txt"
+    "static/css/main.297122cd.chunk.css.map": "/topRankers/static/css/main.297122cd.chunk.css.map",
+    "static/js/2.6a4cd5dc.chunk.js.LICENSE.txt": "/topRankers/static/js/2.6a4cd5dc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.066b8484.js",
     "static/css/2.1ad56b46.chunk.css",
-    "static/js/2.75ced260.chunk.js",
-    "static/css/main.172b4db2.chunk.css",
-    "static/js/main.64e0f194.chunk.js"
+    "static/js/2.6a4cd5dc.chunk.js",
+    "static/css/main.297122cd.chunk.css",
+    "static/js/main.6b6f18ca.chunk.js"
   ]
 }

@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/Components/Editable.css"],"names":[],"mappings":"AAAA,aAEI,WAAY,CACZ,wBAAoC,CACpC,YAAa,CACb,WAAY,CACZ,4BACJ","file":"main.172b4db2.chunk.css","sourcesContent":[".buttonstyle{\r\n\r\n    padding: 7px;\r\n    border: 1px solid rgb(199, 191, 191);\r\n    outline: none;\r\n    margin: 10px;\r\n    background-color: transparent;\r\n}\r\n\r\n"]}
