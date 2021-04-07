@@ -6,4 +6,7 @@
     margin: 10px;
     background-color: transparent;
 }
+.buttonstyle:focus{
+    outline: none;
+}
 

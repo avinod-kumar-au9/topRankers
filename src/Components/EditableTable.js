@@ -5,7 +5,8 @@ import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import NonediatableTable from "./NoneditableTable";
 import "./Editable.css";
-import { render } from 'react-dom';
+import GenderCellRenderer from "./genderCellRenderer.js";
+import CountryCellRenderer from "./countryCellRenderer";
 
 const App = () => {
   const [gridApi, setGridApi] = useState(null);
@@ -33,6 +34,7 @@ const App = () => {
       localStorage.setItem("data", JSON.stringify(rowData));
       setdummy("");
       setchilddata(JSON.parse(localStorage.getItem("data")));
+      alert("submitted")
     }
   }, [dummy]);
 
@@ -89,15 +91,7 @@ const App = () => {
         setRowData([]);
       }
     }
-
-    // const selectedData = selectedNodes.map( node => node.data )
-    // console.log(selectedData);
-    // const selectedDataStringPresentation = selectedData.map( node => `${node.make} ${node.model}`).join(', ')
-    // console.log(selectedDataStringPresentation);
-    // alert(`Selected nodes: ${selectedDataStringPresentation}`)
   };
-
- 
 
   const submitHandler = () => {
     gridApi.stopEditing();
@@ -139,19 +133,14 @@ const App = () => {
     setRowData(data);
   };
 
-  // const onCellEditingStarted =(event)=> {
-  //     console.log(event);
-
-  // }
-
   function getDatePicker() {
     function Datepicker() {}
     Datepicker.prototype.init = function (params) {
-      this.eInput = document.createElement('input');
+      this.eInput = document.createElement("input");
       this.eInput.value = params.value;
-      this.eInput.classList.add('ag-input');
-      this.eInput.style.height = '100%';
-      window.jQuery(this.eInput).datepicker({ dateFormat: 'dd/mm/yy' });
+      this.eInput.classList.add("ag-input");
+      this.eInput.style.height = "100%";
+      window.jQuery(this.eInput).datepicker({ dateFormat: "dd/mm/yy" });
     };
     Datepicker.prototype.getGui = function () {
       return this.eInput;
@@ -169,7 +158,6 @@ const App = () => {
     };
     return Datepicker;
   }
-
 
   return (
     <div>
@@ -221,14 +209,32 @@ const App = () => {
             >
               <AgGridColumn
                 field="Id"
-                
+                frameworkComponents={{ genderCellRenderer: GenderCellRenderer }}
+                frameworkComponents={{
+                  CountryCellRenderer: CountryCellRenderer,
+                }}
                 checkboxSelection={true}
               ></AgGridColumn>
               <AgGridColumn field="Name"></AgGridColumn>
               <AgGridColumn field="Email"></AgGridColumn>
-              <AgGridColumn field="Gender"></AgGridColumn>
+              <AgGridColumn
+                field="Gender"
+                cellRenderer="genderCellRenderer"
+                cellEditor="agRichSelectCellEditor"
+                cellEditorParams={{
+                  values: ["Male", "Female"],
+                  cellRenderer: "genderCellRenderer",
+                }}
+              ></AgGridColumn>
               <AgGridColumn field="DOB" cellEditor="datePicker"></AgGridColumn>
-              <AgGridColumn field="Country"></AgGridColumn>
+              <AgGridColumn
+                field="Country"
+                cellEditor="agRichSelectCellEditor"
+                cellEditorParams={{
+                  values: ["Indonesia", "Ukraine"],
+                  cellRenderer: "countryCellRenderer",
+                }}
+              ></AgGridColumn>
               <AgGridColumn field="City"></AgGridColumn>
             </AgGridReact>
           </div>
